@@ -1,66 +1,74 @@
 <script setup>
-const features = [
+const certifications = [
   {
-    title: "Bring Your Own Framework",
+    title: "Certified Wildlife Biologist",
     description:
-      "Build your site using Vue, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Recognized by The Wildlife Society for expertise in wildlife biology and management.",
+    icon: "bx:bxs-badge-check",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "Ecological Field Research",
     description:
-      "Nuxt renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Awarded certification for completing advanced field research methods in ecology.",
+    icon: "bx:bxs-tree",
   },
   {
-    title: "On-Demand Components",
+    title: "Conservation Leadership Program",
     description:
-      "Need some JS? Nuxt can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Certification for leading conservation projects in national parks and reserves.",
+    icon: "bx:bxs-leaf",
   },
   {
-    title: "Broad Integration",
+    title: "Data Analysis in Ecology",
     description:
-      "Nuxt supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Certified in statistical and spatial data analysis for ecological studies.",
+    icon: "bx:bxs-chart",
   },
   {
-    title: "SEO Enabled",
+    title: "Habitat Restoration Specialist",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Certification for designing and implementing habitat restoration projects.",
+    icon: "bx:bxs-home-heart",
   },
   {
-    title: "Community",
+    title: "Community Engagement in Conservation",
     description:
-      "Nuxt is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Trained in engaging local communities for effective and sustainable conservation.",
+    icon: "bx:bxs-group",
   },
 ];
 </script>
 
 <template>
-  <div class="mt-16 md:mt-0">
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      Everything you need to start a website
-    </h2>
-    <p class="text-lg mt-4 text-slate-600">
-      Nuxt comes batteries included. It takes the best parts of state-of-the-art
-      tools and adds its own innovations.
-    </p>
-  </div>
+  <section class="bg-gray-50 py-16 px-6 lg:px-16">
+    <div class="text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold text-green-900">
+        My Certifications
+      </h2>
+      <p class="text-lg mt-4 text-gray-600 max-w-3xl mx-auto">
+        Explore the certifications that demonstrate my expertise in wildlife biology, ecological research, and conservation leadership.
+      </p>
+    </div>
 
-  <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-    <div v-for="item of features" class="flex gap-4 items-start">
-      <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
-        <Icon class="text-white" :name="item.icon" />
-      </div>
-      <div>
-        <h3 class="font-semibold text-lg">{{ item.title }}</h3>
-        <p class="text-slate-500 mt-2 leading-relaxed">
-          {{ item.description }}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-16">
+      <div
+        v-for="certification of certifications"
+        :key="certification.title"
+        class="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+      >
+        <div class="flex items-center mb-4">
+          <div class="bg-green-900 text-white rounded-full p-3 w-12 h-12 flex items-center justify-center">
+            <Icon :name="certification.icon" class="text-2xl" />
+          </div>
+          <h3 class="ml-4 font-semibold text-lg text-green-900">
+            {{ certification.title }}
+          </h3>
+        </div>
+        <p class="text-gray-600">
+          {{ certification.description }}
         </p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
+

@@ -4,45 +4,45 @@ definePageMeta({
 });
 </script>
 
-
 <template>
-  <section class="py-12 " id="about-me">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-green-900 mb-6">About Me</h2>
-      <div class="grid md:grid-cols-2 gap-8">
+  <section class="py-16 bg-gray-50" id="about-me">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center lg:text-left">
+      <h2 class="text-4xl font-extrabold text-green-900 mb-10">About Me</h2>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
         <!-- Image Section -->
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center">
           <img
             src="/assets/img/hero2.jpg"
             alt="Wildlife Biologist"
-            class="rounded-full w-48 h-48 object-cover shadow-lg"
+            class="rounded-full w-56 h-56 object-cover shadow-2xl transition-transform transform hover:scale-105"
           />
         </div>
 
         <!-- Text Section -->
-        <div class="flex flex-col justify-center items-center md:items-start">
-          <p class="text-lg text-gray-700 mb-4">
-            Hello, I’m Kikie Kendagor, a dedicated wildlife biologist and environmental researcher with a passion for preserving
-            biodiversity. With over 5 years of experience in ecological studies, conservation efforts, and wildlife management, I
-            am committed to making a difference in the world by protecting our planet’s ecosystems.
+        <div>
+          <p class="text-lg text-gray-800 leading-relaxed mb-6">
+            Hi, I’m <span class="font-semibold text-green-800">Kikie Kendagor</span>, a wildlife biologist and environmental researcher passionate about 
+            preserving biodiversity and protecting ecosystems. With over <strong>5 years of experience</strong> in ecological studies, conservation efforts, 
+            and wildlife management, I’m committed to making a positive difference in our world.
           </p>
-          <p class="text-lg text-gray-700 mb-4">
-            I specialize in conducting research to understand animal behavior, monitoring species in their natural habitats, and
-            contributing to sustainable practices that help ensure the survival of endangered species. Throughout my career, I’ve had
-            the privilege of collaborating with conservation organizations, government agencies, and local communities to make a
-            positive impact on wildlife conservation.
+          <p class="text-lg text-gray-800 leading-relaxed mb-6">
+            I specialize in understanding animal behavior, monitoring species in their natural habitats, and driving sustainable practices to 
+            ensure the survival of endangered species. I’ve had the privilege of working with conservation organizations, government bodies, and 
+            local communities to make meaningful contributions to wildlife conservation.
           </p>
-          <p class="text-lg text-gray-700 mb-4">
-            My work combines field research, data analysis, and policy advocacy to promote sustainable ecosystems and conservation
-            strategies. I’m passionate about educating the public, sharing knowledge, and working towards a future where both wildlife
-            and human communities can thrive.
+          <p class="text-lg text-gray-800 leading-relaxed mb-6">
+            My approach combines <strong>field research</strong>, <strong>data-driven analysis</strong>, and <strong>policy advocacy</strong> to promote 
+            sustainable ecosystems and innovative conservation strategies. I’m also passionate about educating others, sharing knowledge, 
+            and inspiring action for a harmonious coexistence of wildlife and humanity.
           </p>
-          <a
-            href="#contact"
-            class="inline-block mt-6 px-8 py-3 bg-green-600 text-white font-semibold rounded-lg shadow-lg hover:bg-green-700 transition-colors duration-300"
-          >
-            Contact Me
-          </a>
+          <div class="mt-8">
+            <a
+              href="/contact"
+              class="inline-block px-8 py-4 bg-green-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-green-700 transform transition-all duration-300 hover:-translate-y-1"
+            >
+              Get in Touch
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -56,5 +56,8 @@ export default {
 </script>
 
 <style scoped>
-/* Add custom styles if needed */
+/* Custom hover effect for smoother transitions */
+img:hover {
+  box-shadow: 0 8px 24px rgba(0, 128, 0, 0.2);
+}
 </style>

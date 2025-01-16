@@ -1,12 +1,13 @@
 <script setup>
 const menuitems = [
-  {
-    title: "Features",
-    path: "#",
+  
+{
+    title: "Home",
+    path: "/",
   },
   {
     title: "Gallery",
-    path: "/pricing",
+    path: "/gallery",
   },
   {
     title: "About Me",
@@ -27,7 +28,7 @@ const open = ref(false);
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
           ><span class="font-bold text-slate-800">Kikie</span
-          ><span class=" font-bold text-slate-800">Kendagor.R</span>
+          ><span class=" font-bold text-green-900">Kendagor.R</span>
         </a>
         <div class="block lg:hidden">
           <button @click="open = !open" class="text-gray-800">
